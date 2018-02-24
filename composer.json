@@ -1,0 +1,28 @@
+{
+    "name": "igrejanet/avatar",
+    "description": "Avatar creator for your users",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matheus Lopes Santos",
+            "email": "fale_com_lopez@hotmail.com"
+        }
+    ],
+    "require": {
+        "ext-gd": "^7.0",
+        "php": "^7.0",
+        "phpunit/phpunit": "^6.5",
+        "ramsey/uuid": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Igrejanet\\Avatar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

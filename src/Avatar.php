@@ -51,7 +51,7 @@ class Avatar
      * @throws  \ReflectionException
      * @throws  Exception
      */
-    public function generate(string $firstName, string $lastName = '')
+    public function generate(string $firstName, string $lastName = '') : string
     {
         if ( $lastName ==  '') {
             $text = $firstName[0] . $firstName[1];

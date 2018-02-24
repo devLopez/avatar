@@ -1,6 +1,8 @@
 Igrejanet Avatar
 ===
 
+[![Build Status](https://travis-ci.org/devLopez/avatar.svg?branch=master)](https://travis-ci.org/devLopez/avatar)
+
 O package Igrejanet Avatar é muito útil para a criaçao de avatar para usuários,
 deixando a exigência de anexação de uma foto de lado.
 

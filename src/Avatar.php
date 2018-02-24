@@ -10,7 +10,7 @@ use Ramsey\Uuid\Uuid;
  * Avatar
  *
  * @author  Matheus Lopes Santos <fale_com_lopez@hotmail.com>
- * @version 1.0.0
+ * @version 1.0.1
  * @since   23/02/2018
  * @package Igrejanet\Avatar
  */
@@ -73,7 +73,7 @@ class Avatar
         $fontColor          = imagecolorallocate($image, 255, 255, 255);
 
         // Generates and save the image
-        imagettftext($image, 64, 0, 10, 90, $fontColor, $this->font, $text);
+        imagettftext($image, 48, 0, 6, 85, $fontColor, $this->font, $text);
 
         if ( ! imagepng($image, $this->pathToSave . '/' . $filename) ) {
             throw new Exception('We can\'t create your avatar. Try again');
@@ -83,31 +83,78 @@ class Avatar
     }
 
     /**
-     * @param   string  $name
-     * @param   mixed  $value
+     * @return int
+     */
+    public function getWidth() : int
+    {
+        return $this->width;
+    }
+
+    /**
+     * @param   int  $width
      * @return  $this
      */
-    public function __set($name, $value)
+    public function setWidth(int $width)
     {
-        if ( property_exists($this, $name) ) {
-            throw new BadMethodCallException();
-        }
-
-        $this->$name = $value;
+        $this->width = $width;
 
         return $this;
     }
 
     /**
-     * @param   string  $name
-     * @return  mixed
+     * @return int
      */
-    public function __get($name)
+    public function getHeight() : int
     {
-        if ( property_exists($this, $name) ) {
-            throw new BadMethodCallException();
-        }
+        return $this->height;
+    }
 
-        return $this->$name;
+    /**
+     * @param   int  $height
+     * @return  $this
+     */
+    public function setHeight(int $height)
+    {
+        $this->height = $height;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFont() : string
+    {
+        return $this->font;
+    }
+
+    /**
+     * @param   string  $font
+     * @return  $this
+     */
+    public function setFont(string $font)
+    {
+        $this->font = $font;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPathToSave() : string
+    {
+        return $this->pathToSave;
+    }
+
+    /**
+     * @param   string  $pathToSave
+     * @return  $this
+     */
+    public function setPathToSave(string $pathToSave)
+    {
+        $this->pathToSave = $pathToSave;
+
+        return $this;
     }
 }

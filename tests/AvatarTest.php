@@ -15,7 +15,7 @@ class AvatarTest extends TestCase
         $directory = __DIR__ . '/../resources/tests';
 
         $avatar = new Avatar($directory);
-        $filename = $avatar->generate('Marcos', 'Lacerda');
+        $filename = $avatar->generate('Matheus', 'Developer');
 
         $this->assertFileExists($directory . '/' . $filename);
     }

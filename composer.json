@@ -13,7 +13,9 @@
         "ext-gd": "^7.0",
         "php": "^7.0",
         "phpunit/phpunit": "^6.5",
-        "ramsey/uuid": "^3.7"
+        "ramsey/uuid": "^3.7",
+        "guzzlehttp/guzzle": "~5.0",
+        "illuminate/support": "~5.5"
     },
     "autoload": {
         "psr-4": {

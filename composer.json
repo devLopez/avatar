@@ -26,5 +26,16 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Igrejanet\\Avatar\\ServiceProviders\\AvatarServiceProvider"
+            ],
+            "aliases": {
+                "AdorableAvatar": "Igrejanet\\Avatar\\Facades\\AdorableAvatarFacade",
+                "Avatar": "Igrejanet\\Avatar\\Facades\\AvatarFacade"
+            }
+        }
     }
 }
